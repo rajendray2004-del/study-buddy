@@ -1,0 +1,896 @@
+[
+  {
+    "date": "2026-08-19 21:50",
+    "score": 2,
+    "total": 5,
+    "weak_topics": [
+      "Processor Registers",
+      "ALU Operations",
+      "ALU Operations"
+    ],
+    "wrong_questions": [
+      {
+        "question": "Which of the following registers are temporary registers that cannot be accessed by the programmer?",
+        "options": {
+          "A": "R0, R1, and R2",
+          "B": "MAR and MDR",
+          "C": "PC and IR",
+          "D": "Y, Z, and Temp"
+        },
+        "correct_answer": "D",
+        "topic": "Processor Registers"
+      },
+      {
+        "question": "In the ALU setup described, where does the 'A' input of the ALU receive its operand?",
+        "options": {
+          "A": "Directly from the processor bus",
+          "B": "From the output of the Multiplexer (MUX)",
+          "C": "Directly from the Instruction Register (IR)",
+          "D": "From the Memory Address Register (MAR)"
+        },
+        "correct_answer": "B",
+        "topic": "ALU Operations"
+      },
+      {
+        "question": "What are the two inputs that the Multiplexer (MUX) selects between for the ALU's 'A' input?",
+        "options": {
+          "A": "Output of register Z or constant value 2",
+          "B": "Output of register Temp or constant value 4",
+          "C": "Output of register Y or constant value 4",
+          "D": "Output of PC or constant value 2"
+        },
+        "correct_answer": "C",
+        "topic": "ALU Operations"
+      }
+    ]
+  },
+  {
+    "date": "2026-08-20 15:39",
+    "score": 2,
+    "total": 5,
+    "weak_topics": [
+      "Basic Processing Unit",
+      "ALU Operations",
+      "Basic Processing Unit"
+    ],
+    "wrong_questions": [
+      {
+        "question": "Which two steps combined are referred to as the 'Fetch Phase' during instruction execution?",
+        "options": {
+          "A": "Loading the instruction into IR and executing the instruction action",
+          "B": "Loading the instruction into IR and incrementing the PC by 4",
+          "C": "Incrementing the PC by 4 and decoding the instruction",
+          "D": "Fetching data from memory and writing the output to Register Z"
+        },
+        "correct_answer": "B",
+        "topic": "Basic Processing Unit"
+      },
+      {
+        "question": "What are the two possible inputs selected by the Multiplexer (MUX) for input 'A' of the ALU?",
+        "options": {
+          "A": "Output of Z or output of Temp",
+          "B": "Output of Y or constant-value 4",
+          "C": "Processor-bus or Memory-bus",
+          "D": "Output of MAR or output of MDR"
+        },
+        "correct_answer": "B",
+        "topic": "ALU Operations"
+      },
+      {
+        "question": "What is another term used to refer to the processor or Central Processing Unit (CPU)?",
+        "options": {
+          "A": "Instruction Decoder",
+          "B": "Memory Access Unit",
+          "C": "Instruction Set Processor (ISP)",
+          "D": "General Purpose Controller"
+        },
+        "correct_answer": "C",
+        "topic": "Basic Processing Unit"
+      }
+    ]
+  },
+  {
+    "date": "2026-08-20 15:45",
+    "score": 1,
+    "total": 5,
+    "weak_topics": [
+      "Java Overview",
+      "Java Features",
+      "Java Architecture",
+      "Java Security"
+    ],
+    "wrong_questions": [
+      {
+        "question": "Who is recognized as the father of Java?",
+        "options": {
+          "A": "Dennis Ritchie",
+          "B": "James Gosling",
+          "C": "Bjarne Stroustrup",
+          "D": "Guido van Rossum"
+        },
+        "correct_answer": "B",
+        "topic": "Java Overview"
+      },
+      {
+        "question": "Which feature was explicitly removed from Java to simplify the language and improve security?",
+        "options": {
+          "A": "Automatic Garbage Collection",
+          "B": "Explicit Pointers",
+          "C": "Object-Oriented Programming",
+          "D": "Multi-threading"
+        },
+        "correct_answer": "B",
+        "topic": "Java Features"
+      },
+      {
+        "question": "Why is Java described as 'architecture-neutral'?",
+        "options": {
+          "A": "Primitive data types have fixed sizes across different implementations.",
+          "B": "It requires custom code re-writing for every target CPU architecture.",
+          "C": "It relies heavily on operator overloading.",
+          "D": "It uses hardware-dependent compilation methods."
+        },
+        "correct_answer": "A",
+        "topic": "Java Architecture"
+      },
+      {
+        "question": "What enables Java to run secure and virus-free applications?",
+        "options": {
+          "A": "Direct access to host system hardware pointers",
+          "B": "Execution inside a virtual machine sandbox",
+          "C": "Manual memory deallocation by the developer",
+          "D": "Platform-dependent machine code compilation"
+        },
+        "correct_answer": "B",
+        "topic": "Java Security"
+      }
+    ]
+  },
+  {
+    "date": "2026-08-20 16:03",
+    "score": 0,
+    "total": 5,
+    "weak_topics": [
+      "Astronomy",
+      "Astronomy",
+      "Solar Science",
+      "Physics",
+      "Astronomy"
+    ],
+    "wrong_questions": [
+      {
+        "question": "Which planet in the solar system is known as the 'Red Planet'?",
+        "options": {
+          "A": "Venus",
+          "B": "Mars",
+          "C": "Jupiter",
+          "D": "Saturn"
+        },
+        "correct_answer": "B",
+        "topic": "Astronomy"
+      },
+      {
+        "question": "What is the largest planet in our solar system?",
+        "options": {
+          "A": "Earth",
+          "B": "Neptune",
+          "C": "Jupiter",
+          "D": "Uranus"
+        },
+        "correct_answer": "C",
+        "topic": "Astronomy"
+      },
+      {
+        "question": "Which element makes up the majority of the Sun's mass?",
+        "options": {
+          "A": "Oxygen",
+          "B": "Helium",
+          "C": "Hydrogen",
+          "D": "Carbon"
+        },
+        "correct_answer": "C",
+        "topic": "Solar Science"
+      },
+      {
+        "question": "What force keeps the planets in orbit around the Sun?",
+        "options": {
+          "A": "Magnetic force",
+          "B": "Gravity",
+          "C": "Centrifugal force",
+          "D": "Nuclear force"
+        },
+        "correct_answer": "B",
+        "topic": "Physics"
+      },
+      {
+        "question": "Which planet has the highest average surface temperature in the solar system?",
+        "options": {
+          "A": "Mercury",
+          "B": "Venus",
+          "C": "Mars",
+          "D": "Earth"
+        },
+        "correct_answer": "B",
+        "topic": "Astronomy"
+      }
+    ]
+  },
+  {
+    "date": "2026-08-20 16:34",
+    "score": 0,
+    "total": 50,
+    "weak_topics": [
+      "Data Structures Basics",
+      "Data Structures Basics",
+      "Data Structures Basics",
+      "Elementary Data Organization",
+      "Elementary Data Organization",
+      "Elementary Data Organization",
+      "Elementary Data Organization",
+      "Elementary Data Organization",
+      "Elementary Data Organization",
+      "Elementary Data Organization",
+      "Entities and Attributes",
+      "Entities and Attributes",
+      "Entities and Attributes",
+      "Entities and Attributes",
+      "Entities and Attributes",
+      "Entities and Attributes",
+      "Elementary Data Organization",
+      "Fields Records Files",
+      "Fields Records Files",
+      "Fields Records Files",
+      "Fields Records Files",
+      "Fields Records Files",
+      "Record Types",
+      "Record Types",
+      "Record Types",
+      "Record Types",
+      "Record Types",
+      "Complex Data Structures",
+      "Complex Data Structures",
+      "Complex Data Structures",
+      "Complex Data Structures",
+      "Complex Data Structures",
+      "Entities and Attributes",
+      "Entities and Attributes",
+      "Entities and Attributes",
+      "Entities and Attributes",
+      "Fields Records Files",
+      "Complex Data Structures",
+      "Fields Records Files",
+      "Elementary Data Organization",
+      "Record Types",
+      "Fields Records Files",
+      "Fields Records Files",
+      "Elementary Data Organization",
+      "Elementary Data Organization",
+      "Entities and Attributes",
+      "Complex Data Structures",
+      "Entities and Attributes",
+      "Fields Records Files",
+      "Data Structures Basics"
+    ],
+    "wrong_questions": [
+      {
+        "question": "What is defined as the logical or mathematical model of a particular organization of data?",
+        "options": {
+          "A": "Data structure",
+          "B": "Algorithm",
+          "C": "Database Management System",
+          "D": "Data type"
+        },
+        "correct_answer": "A",
+        "topic": "Data Structures Basics"
+      },
+      {
+        "question": "According to the text, which consideration must a data model meet regarding real-world relationships?",
+        "options": {
+          "A": "It must use as little memory as possible",
+          "B": "It must be rich enough in structure to mirror actual real-world relationships",
+          "C": "It must strictly contain numeric data",
+          "D": "It must eliminate all variable-length fields"
+        },
+        "correct_answer": "B",
+        "topic": "Data Structures Basics"
+      },
+      {
+        "question": "Which requirement is specified for a data structure model regarding processing data?",
+        "options": {
+          "A": "It should be encrypted for security",
+          "B": "It should be implemented in C++ only",
+          "C": "It should be simple enough that one can effectively process data whenever necessary",
+          "D": "It must execute in O(1) time complexity"
+        },
+        "correct_answer": "C",
+        "topic": "Data Structures Basics"
+      },
+      {
+        "question": "How are 'Data' defined in the basic terminology section?",
+        "options": {
+          "A": "Processed files ready for output",
+          "B": "Simply values or sets of values",
+          "C": "Hardware locations in memory",
+          "D": "Mathematical functions"
+        },
+        "correct_answer": "B",
+        "topic": "Elementary Data Organization"
+      },
+      {
+        "question": "What term refers to a single unit of values?",
+        "options": {
+          "A": "Data items",
+          "B": "Entity set",
+          "C": "Data structures",
+          "D": "Files"
+        },
+        "correct_answer": "A",
+        "topic": "Elementary Data Organization"
+      },
+      {
+        "question": "Data items that are divided into sub-items are called:",
+        "options": {
+          "A": "Elementary items",
+          "B": "Group items",
+          "C": "Primary items",
+          "D": "Attribute items"
+        },
+        "correct_answer": "B",
+        "topic": "Elementary Data Organization"
+      },
+      {
+        "question": "Which of the following is an example of a Group item given in the text?",
+        "options": {
+          "A": "SSN",
+          "B": "Employee Name",
+          "C": "Age",
+          "D": "Sex"
+        },
+        "correct_answer": "B",
+        "topic": "Elementary Data Organization"
+      },
+      {
+        "question": "According to the text, into which sub-items can an Employee Name be divided?",
+        "options": {
+          "A": "First name, middle name, and last name",
+          "B": "Title, name, and surname",
+          "C": "First name, initial, and nickname",
+          "D": "Name, SSN, and age"
+        },
+        "correct_answer": "A",
+        "topic": "Elementary Data Organization"
+      },
+      {
+        "question": "Data items that are NOT able to be divided into sub-items are called:",
+        "options": {
+          "A": "Group items",
+          "B": "Elementary items",
+          "C": "Complex items",
+          "D": "Composite items"
+        },
+        "correct_answer": "B",
+        "topic": "Elementary Data Organization"
+      },
+      {
+        "question": "Which of the following is provided in the text as an example of an Elementary item?",
+        "options": {
+          "A": "Employee Name",
+          "B": "SSN",
+          "C": "Student Record",
+          "D": "Address"
+        },
+        "correct_answer": "B",
+        "topic": "Elementary Data Organization"
+      },
+      {
+        "question": "What is an 'Entity' as defined in the text?",
+        "options": {
+          "A": "A collection of unrelated files",
+          "B": "Something that has certain attributes or properties which may be assigned values",
+          "C": "A specific programming language variable",
+          "D": "The primary memory location of a file"
+        },
+        "correct_answer": "B",
+        "topic": "Entities and Attributes"
+      },
+      {
+        "question": "The values assigned to properties of an entity can be:",
+        "options": {
+          "A": "Numeric only",
+          "B": "Non-numeric only",
+          "C": "Either numeric or non-numeric",
+          "D": "Boolean values only"
+        },
+        "correct_answer": "C",
+        "topic": "Entities and Attributes"
+      },
+      {
+        "question": "Which group of examples represents attributes of an entity in the text?",
+        "options": {
+          "A": "Rohland Gail, 34, F, 134-34-5533",
+          "B": "Names, Age, Sex, SSN",
+          "C": "File, Record, Field, Key",
+          "D": "Fixed, Variable, Minimum, Maximum"
+        },
+        "correct_answer": "B",
+        "topic": "Entities and Attributes"
+      },
+      {
+        "question": "In the example provided in the text, '34' is a value corresponding to which attribute?",
+        "options": {
+          "A": "Sex",
+          "B": "SSN",
+          "C": "Age",
+          "D": "Names"
+        },
+        "correct_answer": "C",
+        "topic": "Entities and Attributes"
+      },
+      {
+        "question": "What is formed by entities with similar attributes?",
+        "options": {
+          "A": "Entity set",
+          "B": "Group item",
+          "C": "Elementary set",
+          "D": "Data model"
+        },
+        "correct_answer": "A",
+        "topic": "Entities and Attributes"
+      },
+      {
+        "question": "The set of all possible values that could be assigned to a particular attribute is known as the:",
+        "options": {
+          "A": "Primary key",
+          "B": "Range of values",
+          "C": "Entity set",
+          "D": "Data item"
+        },
+        "correct_answer": "B",
+        "topic": "Entities and Attributes"
+      },
+      {
+        "question": "How is 'Information' defined or described in the text?",
+        "options": {
+          "A": "Data with given attributes, or meaningful / processed data",
+          "B": "Raw unformatted binary bits stored on disk",
+          "C": "A collection of sub-items without context",
+          "D": "Mathematical functions applied to memory"
+        },
+        "correct_answer": "A",
+        "topic": "Elementary Data Organization"
+      },
+      {
+        "question": "What is a single elementary unit of information representing an attribute of an entity called?",
+        "options": {
+          "A": "File",
+          "B": "Record",
+          "C": "Field",
+          "D": "Key"
+        },
+        "correct_answer": "C",
+        "topic": "Fields Records Files"
+      },
+      {
+        "question": "What is a record defined as?",
+        "options": {
+          "A": "A single elementary unit of information",
+          "B": "The collection of field values of a given entity",
+          "C": "A collection of files in a system",
+          "D": "The maximum length of an attribute"
+        },
+        "correct_answer": "B",
+        "topic": "Fields Records Files"
+      },
+      {
+        "question": "What is a file defined as?",
+        "options": {
+          "A": "The collection of records of the entities in a given entity set",
+          "B": "A single attribute value",
+          "C": "A group item divided into elementary items",
+          "D": "The logical description of memory"
+        },
+        "correct_answer": "A",
+        "topic": "Fields Records Files"
+      },
+      {
+        "question": "A field K in a file that uniquely determines the record is called a:",
+        "options": {
+          "A": "Group key",
+          "B": "Primary key",
+          "C": "Secondary field",
+          "D": "Elementary key"
+        },
+        "correct_answer": "B",
+        "topic": "Fields Records Files"
+      },
+      {
+        "question": "The values k1, k2, ..... in a primary key field K are called:",
+        "options": {
+          "A": "Records",
+          "B": "Entities",
+          "C": "Keys or key values",
+          "D": "Group items"
+        },
+        "correct_answer": "C",
+        "topic": "Fields Records Files"
+      },
+      {
+        "question": "Records may be classified according to length into which two types?",
+        "options": {
+          "A": "Single-length and Multi-length records",
+          "B": "Fixed-length and Variable-length records",
+          "C": "Numeric-length and String-length records",
+          "D": "Elementary-length and Group-length records"
+        },
+        "correct_answer": "B",
+        "topic": "Record Types"
+      },
+      {
+        "question": "What is a defining characteristic of fixed-length records?",
+        "options": {
+          "A": "All records contain different data items with varying space",
+          "B": "All records contain the same data items with the same amount of space assigned to each data item",
+          "C": "Records have no defined minimum or maximum length",
+          "D": "They can only store numeric data"
+        },
+        "correct_answer": "B",
+        "topic": "Record Types"
+      },
+      {
+        "question": "What is a characteristic of variable-length records?",
+        "options": {
+          "A": "File records may contain different lengths",
+          "B": "All records must use identical space",
+          "C": "They do not contain any fields",
+          "D": "They can only represent group items"
+        },
+        "correct_answer": "A",
+        "topic": "Record Types"
+      },
+      {
+        "question": "Why do student records have variable lengths according to the example in the text?",
+        "options": {
+          "A": "Because students have names of different lengths",
+          "B": "Because different students take different numbers of courses",
+          "C": "Because SSN lengths vary across students",
+          "D": "Because age is recorded differently for each student"
+        },
+        "correct_answer": "B",
+        "topic": "Record Types"
+      },
+      {
+        "question": "Variable-length records have:",
+        "options": {
+          "A": "Only a maximum length",
+          "B": "Only a minimum length",
+          "C": "A minimum and a maximum length",
+          "D": "Neither a minimum nor a maximum length"
+        },
+        "correct_answer": "C",
+        "topic": "Record Types"
+      },
+      {
+        "question": "How many steps are included in the study of complex data structures?",
+        "options": {
+          "A": "Two",
+          "B": "Three",
+          "C": "Four",
+          "D": "Five"
+        },
+        "correct_answer": "B",
+        "topic": "Complex Data Structures"
+      },
+      {
+        "question": "What is the FIRST step in the study of complex data structures?",
+        "options": {
+          "A": "Implementation of the structure on a computer",
+          "B": "Quantitative analysis of the structure",
+          "C": "Logical or mathematical description of the structure",
+          "D": "Hardware synthesis of the memory blocks"
+        },
+        "correct_answer": "C",
+        "topic": "Complex Data Structures"
+      },
+      {
+        "question": "What is the SECOND step in the study of complex data structures?",
+        "options": {
+          "A": "Logical description of the structure",
+          "B": "Implementation of the structure on a computer",
+          "C": "Quantitative analysis of the structure",
+          "D": "Database design validation"
+        },
+        "correct_answer": "B",
+        "topic": "Complex Data Structures"
+      },
+      {
+        "question": "What is the THIRD step in the study of complex data structures?",
+        "options": {
+          "A": "Quantitative analysis of the structure",
+          "B": "Implementation of the structure on a computer",
+          "C": "Logical or mathematical description of the structure",
+          "D": "Creation of variable-length records"
+        },
+        "correct_answer": "A",
+        "topic": "Complex Data Structures"
+      },
+      {
+        "question": "What does the quantitative analysis of a data structure include determining?",
+        "options": {
+          "A": "The color and font size of data fields",
+          "B": "The amount of memory required",
+          "C": "The names of all entities in the set",
+          "D": "The number of sub-items in an elementary item"
+        },
+        "correct_answer": "B",
+        "topic": "Complex Data Structures"
+      },
+      {
+        "question": "Which of the following correctly pairs an entity attribute with its value from the text example?",
+        "options": {
+          "A": "Sex - Rohland Gail",
+          "B": "Age - 34",
+          "C": "SSN - F",
+          "D": "Names - 134-34-5533"
+        },
+        "correct_answer": "B",
+        "topic": "Entities and Attributes"
+      },
+      {
+        "question": "In the text's example entity value set, 'Rohland Gail' corresponds to which attribute?",
+        "options": {
+          "A": "Names",
+          "B": "Age",
+          "C": "Sex",
+          "D": "SSN"
+        },
+        "correct_answer": "A",
+        "topic": "Entities and Attributes"
+      },
+      {
+        "question": "In the text's example entity value set, 'F' corresponds to which attribute?",
+        "options": {
+          "A": "Names",
+          "B": "Age",
+          "C": "Sex",
+          "D": "SSN"
+        },
+        "correct_answer": "C",
+        "topic": "Entities and Attributes"
+      },
+      {
+        "question": "In the text's example entity value set, '134-34-5533' corresponds to which attribute?",
+        "options": {
+          "A": "Names",
+          "B": "Age",
+          "C": "Sex",
+          "D": "SSN"
+        },
+        "correct_answer": "D",
+        "topic": "Entities and Attributes"
+      },
+      {
+        "question": "Which structural hierarchy reflects data organization from smallest to largest unit in traditional file processing as described in the text?",
+        "options": {
+          "A": "File -> Record -> Field",
+          "B": "Field -> Record -> File",
+          "C": "Record -> Field -> File",
+          "D": "Field -> File -> Record"
+        },
+        "correct_answer": "B",
+        "topic": "Fields Records Files"
+      },
+      {
+        "question": "Why might data be organized into more complex types of structures beyond simple fields, records, and files?",
+        "options": {
+          "A": "Because fields, records, and files can only hold numeric data",
+          "B": "Because standard organization may not be complex enough to maintain and efficiently process certain collections of data",
+          "C": "Because variable-length records are not supported in standard files",
+          "D": "Because elementary items require complex structures"
+        },
+        "correct_answer": "B",
+        "topic": "Complex Data Structures"
+      },
+      {
+        "question": "A record is to an entity as a file is to an:",
+        "options": {
+          "A": "Elementary item",
+          "B": "Entity set",
+          "C": "Attribute",
+          "D": "Primary key"
+        },
+        "correct_answer": "B",
+        "topic": "Fields Records Files"
+      },
+      {
+        "question": "Which of the following is true regarding elementary items?",
+        "options": {
+          "A": "They are divided into first, middle, and last sub-items",
+          "B": "They cannot be divided into sub-items",
+          "C": "They represent a collection of records",
+          "D": "They always contain variable-length student course data"
+        },
+        "correct_answer": "B",
+        "topic": "Elementary Data Organization"
+      },
+      {
+        "question": "Which statement is TRUE about fixed-length records?",
+        "options": {
+          "A": "Different records have different amounts of assigned space",
+          "B": "They are only used when student course numbers vary",
+          "C": "All records contain the same data items with the same space assigned",
+          "D": "They must have a minimum and maximum length specification"
+        },
+        "correct_answer": "C",
+        "topic": "Record Types"
+      },
+      {
+        "question": "Which concept connects attributes of an entity to single elementary units of information?",
+        "options": {
+          "A": "Field",
+          "B": "Primary key",
+          "C": "Group item",
+          "D": "Entity set"
+        },
+        "correct_answer": "A",
+        "topic": "Fields Records Files"
+      },
+      {
+        "question": "What is required for a field item to qualify as a primary key K?",
+        "options": {
+          "A": "It must contain non-numeric data",
+          "B": "It must be a group item",
+          "C": "Its value must uniquely determine the record in the file",
+          "D": "It must be split into three sub-items"
+        },
+        "correct_answer": "C",
+        "topic": "Fields Records Files"
+      },
+      {
+        "question": "Which term describes 'data with given attributes' or 'meaningful or processed data'?",
+        "options": {
+          "A": "Data structure",
+          "B": "Information",
+          "C": "Entity set",
+          "D": "Group item"
+        },
+        "correct_answer": "B",
+        "topic": "Elementary Data Organization"
+      },
+      {
+        "question": "What type of data item is 'Employee Name' categorized as in the text?",
+        "options": {
+          "A": "Elementary item",
+          "B": "Group item",
+          "C": "Entity set",
+          "D": "Primary key"
+        },
+        "correct_answer": "B",
+        "topic": "Elementary Data Organization"
+      },
+      {
+        "question": "If an attribute can take any value from a given collection of allowable values, that collection is called its:",
+        "options": {
+          "A": "Range of values",
+          "B": "Field value",
+          "C": "Primary key set",
+          "D": "Complex structure"
+        },
+        "correct_answer": "A",
+        "topic": "Entities and Attributes"
+      },
+      {
+        "question": "Which step in studying complex data structures involves analyzing memory space or time required?",
+        "options": {
+          "A": "Logical description",
+          "B": "Mathematical description",
+          "C": "Quantitative analysis",
+          "D": "Computer implementation"
+        },
+        "correct_answer": "C",
+        "topic": "Complex Data Structures"
+      },
+      {
+        "question": "Which of the following is NOT an attribute listed for the example entity in the text?",
+        "options": {
+          "A": "Names",
+          "B": "Age",
+          "C": "Salary",
+          "D": "Sex"
+        },
+        "correct_answer": "C",
+        "topic": "Entities and Attributes"
+      },
+      {
+        "question": "In the context of the text, what constitutes a 'Record'?",
+        "options": {
+          "A": "The collection of field values of a given entity",
+          "B": "A single attribute of an entity",
+          "C": "A set of all possible entities",
+          "D": "The implementation of a data structure on a computer"
+        },
+        "correct_answer": "A",
+        "topic": "Fields Records Files"
+      },
+      {
+        "question": "According to the document title, which module does this introductory text belong to?",
+        "options": {
+          "A": "MODULE 1: INTRODUCTION",
+          "B": "MODULE 2: ARRAYS AND STRINGS",
+          "C": "MODULE 3: LINKED LISTS",
+          "D": "MODULE 4: TREES AND GRAPHS"
+        },
+        "correct_answer": "A",
+        "topic": "Data Structures Basics"
+      }
+    ]
+  },
+  {
+    "date": "2026-08-20 16:48",
+    "score": 0,
+    "total": 5,
+    "weak_topics": [
+      "Academic Program",
+      "University Affiliation",
+      "Project Guidance",
+      "Project Titles",
+      "Intellectual Property Rights"
+    ],
+    "wrong_questions": [
+      {
+        "question": "Which degree program are the students pursuing according to the project document?",
+        "options": {
+          "A": "Master of Technology in Mechanical Engineering",
+          "B": "Bachelor of Science in Computer Science",
+          "C": "Bachelor of Engineering in ME & CSE",
+          "D": "Diploma in CNC Manufacturing"
+        },
+        "correct_answer": "C",
+        "topic": "Academic Program"
+      },
+      {
+        "question": "To which university is MVJ College of Engineering affiliated according to the certificate?",
+        "options": {
+          "A": "Bangalore University",
+          "B": "Visvesvaraya Technological University, Belagavi",
+          "C": "Indian Institute of Science",
+          "D": "VTU Mysuru"
+        },
+        "correct_answer": "B",
+        "topic": "University Affiliation"
+      },
+      {
+        "question": "Who served as the faculty guide for this project?",
+        "options": {
+          "A": "Dr. Ajayan K R",
+          "B": "Srinivas L. Gombi",
+          "C": "Prof. Vinothkumar G",
+          "D": "Vinay Kumar M"
+        },
+        "correct_answer": "C",
+        "topic": "Project Guidance"
+      },
+      {
+        "question": "Which of the following projects is NOT mentioned in the certificate section?",
+        "options": {
+          "A": "CNC PLOTTER MACHINE",
+          "B": "VOICE CONTROLLED CNC MACHINE",
+          "C": "CNC FOAM CUTTER",
+          "D": "AUTOMATED 3D PRINTER"
+        },
+        "correct_answer": "D",
+        "topic": "Project Titles"
+      },
+      {
+        "question": "According to the student declaration, who retains ownership of any Intellectual Property Rights (IPR) generated from the project?",
+        "options": {
+          "A": "Visvesvaraya Technological University",
+          "B": "MVJ College of Engineering, Bengaluru",
+          "C": "The individual students exclusively",
+          "D": "Department of Higher Education"
+        },
+        "correct_answer": "B",
+        "topic": "Intellectual Property Rights"
+      }
+    ]
+  }
+]
