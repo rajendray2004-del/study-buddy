@@ -3,10 +3,171 @@ import pdfplumber
 import google.generativeai as genai
 import json
 import datetime
+st.set_page_config(page_title="Hey, Happy To See You ♥", page_icon="📚", layout="wide")
+col1, col2 = st.columns([2, 1])
+with col1:
+    st.title("📚 AI Study Buddy")
+    st.markdown("*Turn your notes into smart, adaptive quizzes*")
+with col2:
+    st.image("undraw_anime.svg", width=160)
+st.markdown("""
+    <style>
+    @keyframes gradientShift {
+        0% { background-position: 0% 50%; }
+        50% { background-position: 100% 50%; }
+        100% { background-position: 0% 50%; }
+    }
 
-st.title("📚 AI Study Buddy")
+    .stApp {
+        background: linear-gradient(-45deg, #0f2027, #203a43, #2c5364, #0f2027);
+        background-size: 400% 400%;
+        animation: gradientShift 15s ease infinite;
+    }
+
+    h1 {
+        background: linear-gradient(90deg, #00d2ff 0%, #3a7bd5 50%, #00d2ff 100%);
+        background-size: 200% auto;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-weight: 800;
+        animation: gradientShift 4s linear infinite;
+    }
+
+    h2, h3 {
+        color: #64ffda;
+    }
+
+    p, label, .stMarkdown {
+        color: #e0e0e0;
+    }
+
+    .stButton>button {
+        background: linear-gradient(90deg, #00d2ff, #3a7bd5);
+        color: white;
+        border-radius: 30px;
+        border: none;
+        padding: 12px 28px;
+        font-weight: 600;
+        letter-spacing: 0.5px;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 10px rgba(0, 210, 255, 0.2);
+    }
+
+    .stButton>button:hover {
+        transform: translateY(-3px) scale(1.03);
+        box-shadow: 0 8px 20px rgba(0, 210, 255, 0.4);
+    }
+
+    div[data-testid="stRadio"] label {
+        background-color: rgba(255,255,255,0.04);
+        border: 1px solid rgba(100, 255, 218, 0.15);
+        border-radius: 10px;
+        padding: 10px 14px;
+        margin: 5px 0;
+        transition: all 0.25s ease;
+    }
+
+    div[data-testid="stRadio"] label:hover {
+        background-color: rgba(100, 255, 218, 0.1);
+        border-color: #64ffda;
+        transform: translateX(4px);
+    }
+
+    .stFileUploader {
+        border: 2px dashed #3a7bd5;
+        border-radius: 14px;
+        padding: 12px;
+        background-color: rgba(255,255,255,0.02);
+    }
+
+    div[data-testid="stAlert"] {
+        border-radius: 12px;
+    }
+
+    .stSlider {
+        padding-top: 10px;
+    }
+        .stApp::before {
+        content: "📚 ✏️ 🎓 📖 ✨ 📚 🎓 ✏️";
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        font-size: 40px;
+        opacity: 0.06;
+        line-height: 150px;
+        letter-spacing: 60px;
+        pointer-events: none;
+        z-index: 0;
+        animation: floatBg 20s linear infinite;
+        overflow: hidden;
+    }
+
+    @keyframes floatBg {
+        0% { transform: translateY(0px); }
+        50% { transform: translateY(-30px); }
+        100% { transform: translateY(0px); }
+    }
+
+    .main .block-container {
+        position: relative;
+        z-index: 1;
+    }
+    </style>
+""", unsafe_allow_html=True)
+st.markdown("""
+    <style>
+    .mascot {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        width: 90px;
+        z-index: 999;
+        animation: bounce 3s ease-in-out infinite;
+    }
+    @keyframes bounce {
+        0%, 100% { transform: translateY(0px); }
+        50% { transform: translateY(-15px); }
+    }
+    </style>
+
+    <svg class="mascot" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+        <ellipse cx="100" cy="120" rx="65" ry="70" fill="#3a7bd5"/>
+        <ellipse cx="100" cy="120" rx="65" ry="70" fill="url(#bodyGrad)" opacity="0.4"/>
+        <defs>
+            <linearGradient id="bodyGrad" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stop-color="#64ffda"/>
+                <stop offset="100%" stop-color="#3a7bd5"/>
+            </linearGradient>
+        </defs>
+        <circle cx="75" cy="105" r="22" fill="white"/>
+        <circle cx="125" cy="105" r="22" fill="white"/>
+        <circle cx="75" cy="105" r="10" fill="#1e1e2f"/>
+        <circle cx="125" cy="105" r="10" fill="#1e1e2f"/>
+        <circle cx="72" cy="101" r="3" fill="white"/>
+        <circle cx="122" cy="101" r="3" fill="white"/>
+        <polygon points="100,120 90,135 110,135" fill="#ffb74d"/>
+        <path d="M 50 70 Q 100 30 150 70 Q 130 60 100 60 Q 70 60 50 70 Z" fill="#2c5364"/>
+        <ellipse cx="60" cy="150" rx="15" ry="25" fill="#3a7bd5" transform="rotate(-20 60 150)"/>
+        <ellipse cx="140" cy="150" rx="15" ry="25" fill="#3a7bd5" transform="rotate(20 140 150)"/>
+        <rect x="70" y="155" width="60" height="40" rx="4" fill="#ffffff" opacity="0.9"/>
+        <line x1="75" y1="165" x2="125" y2="165" stroke="#3a7bd5" stroke-width="2"/>
+        <line x1="75" y1="175" x2="125" y2="175" stroke="#3a7bd5" stroke-width="2"/>
+        <line x1="75" y1="185" x2="110" y2="185" stroke="#3a7bd5" stroke-width="2"/>
+    </svg>
+""", unsafe_allow_html=True)
 
 mode = st.radio("Choose mode:", ["New Quiz", "Review Weak Questions"], horizontal=True)
+import streamlit as st
+import pdfplumber
+import google.generativeai as genai
+import json
+import datetime
+
+st.set_page_config(page_title="AI Study Buddy", page_icon="📚", layout="wide")
+
+st.markdown("""""", unsafe_allow_html=True)
 
 if mode == "Review Weak Questions":
     try:
