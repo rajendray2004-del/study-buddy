@@ -1,0 +1,60 @@
+{
+  "quiz": [
+    {
+      "question": "Which planet in our solar system is known as the Red Planet?",
+      "options": {
+        "A": "Venus",
+        "B": "Mars",
+        "C": "Jupiter",
+        "D": "Saturn"
+      },
+      "correct_answer": "B",
+      "topic": "Astronomy"
+    },
+    {
+      "question": "What is the most abundant gas in Earth's atmosphere?",
+      "options": {
+        "A": "Oxygen",
+        "B": "Carbon Dioxide",
+        "C": "Nitrogen",
+        "D": "Hydrogen"
+      },
+      "correct_answer": "C",
+      "topic": "Earth Science"
+    },
+    {
+      "question": "What process do green plants use to convert sunlight into chemical energy?",
+      "options": {
+        "A": "Respiration",
+        "B": "Photosynthesis",
+        "C": "Fermentation",
+        "D": "Transpiration"
+      },
+      "correct_answer": "B",
+      "topic": "Biology"
+    },
+    {
+      "question": "Which chemical element is represented by the symbol 'Au'?",
+      "options": {
+        "A": "Silver",
+        "B": "Copper",
+        "C": "Gold",
+        "D": "Aluminum"
+      },
+      "correct_answer": "C",
+      "topic": "Chemistry"
+    },
+    {
+      "question": "What is the capital city of France?",
+      "options": {
+        "A": "Rome",
+        "B": "Madrid",
+        "C": "Berlin",
+        "D": "Paris"
+      },
+      "correct_answer": "D",
+      "topic": "Geography"
+    }
+  ],
+  "leaderboard": []
+}

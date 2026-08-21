@@ -158,7 +158,7 @@ st.markdown("""
     </svg>
 """, unsafe_allow_html=True)
 
-mode = st.radio("Choose mode:", ["New Quiz", "Review Weak Questions"], horizontal=True)
+mode = st.radio("Choose mode:", ["New Quiz", "Review Weak Questions", "Competitive Room"], horizontal=True)
 import streamlit as st
 import pdfplumber
 import google.generativeai as genai
@@ -199,6 +199,122 @@ if mode == "Review Weak Questions":
                 st.success(f"Review Score: {review_score}/{len(review_questions)}")
     except FileNotFoundError:
         st.info("No quiz history yet. Take a quiz first!")
+
+    st.stop()
+
+# ---------- COMPETITIVE ROOM MODE ----------
+if mode == "Competitive Room":
+    st.subheader("🏆 Competitive Room")
+    
+    room_action = st.radio("Do you want to:", ["Create a Room", "Join a Room"], horizontal=True)
+    
+    if room_action == "Create a Room":
+        room_code = st.text_input("Set a Room Code (share this with friends):", value="ROOM123")
+        your_name = st.text_input("Your Name:")
+        uploaded_file = st.file_uploader("Upload notes to create quiz", type=["pdf", "docx", "txt"])
+        num_q = st.number_input("Number of questions:", min_value=1, max_value=20, value=5)
+        
+        if uploaded_file and your_name and st.button("Create Room & Generate Quiz"):
+            full_text = ""
+            if uploaded_file.name.endswith(".pdf"):
+                with pdfplumber.open(uploaded_file) as pdf:
+                    for page in pdf.pages:
+                        text = page.extract_text()
+                        if text:
+                            full_text += text
+            elif uploaded_file.name.endswith(".docx"):
+                import docx
+                doc = docx.Document(uploaded_file)
+                for para in doc.paragraphs:
+                    full_text += para.text + "\n"
+            elif uploaded_file.name.endswith(".txt"):
+                full_text = uploaded_file.read().decode("utf-8")
+
+            genai.configure(api_key=st.secrets["GEMINI_API_KEY"])
+            model = genai.GenerativeModel("gemini-3.6-flash")
+
+            prompt = f"""Generate {num_q} multiple choice quiz questions based on this text.
+Return ONLY valid JSON, no other text, in this exact format:
+[
+  {{
+    "question": "...",
+    "options": {{"A": "...", "B": "...", "C": "...", "D": "..."}},
+    "correct_answer": "A",
+    "topic": "short topic name"
+  }}
+]
+Text:
+{full_text[:3000]}"""
+
+            with st.spinner("Creating room..."):
+                response = model.generate_content(prompt)
+                clean_text = response.text.strip().replace("```json", "").replace("```", "")
+                room_quiz = json.loads(clean_text)
+
+                room_data = {
+                    "quiz": room_quiz,
+                    "leaderboard": []
+                }
+                with open(f"room_{room_code}.json", "w") as f:
+                    json.dump(room_data, f, indent=2)
+
+                st.success(f"✅ Room '{room_code}' created! Share this code with friends.")
+                st.session_state.current_room = room_code
+                st.session_state.room_quiz = room_quiz
+                st.session_state.player_name = your_name
+
+    elif room_action == "Join a Room":
+        room_code = st.text_input("Enter Room Code:")
+        your_name = st.text_input("Your Name:")
+        
+        if room_code and st.button("Join Room"):
+            try:
+                with open(f"room_{room_code}.json", "r") as f:
+                    room_data = json.load(f)
+                st.session_state.current_room = room_code
+                st.session_state.room_quiz = room_data["quiz"]
+                st.session_state.player_name = your_name
+                st.success(f"Joined room '{room_code}'!")
+            except FileNotFoundError:
+                st.error("Room not found. Check the code and try again.")
+
+    # If a room is active, show the quiz
+    if "current_room" in st.session_state and "room_quiz" in st.session_state:
+        st.divider()
+        st.subheader(f"Room: {st.session_state.current_room}")
+        quiz = st.session_state.room_quiz
+        room_answers = {}
+
+        for i, q in enumerate(quiz):
+            st.write(f"**Q{i+1}: {q['question']}**")
+            options = [f"{k}) {v}" for k, v in q['options'].items()]
+            choice = st.radio("Select:", options, key=f"room_q{i}", index=None)
+            if choice:
+                room_answers[i] = choice[0]
+            st.divider()
+
+        if st.button("Submit & See Leaderboard"):
+            score = sum(1 for i, q in enumerate(quiz) if room_answers.get(i) == q['correct_answer'])
+            
+            room_file = f"room_{st.session_state.current_room}.json"
+            with open(room_file, "r") as f:
+                room_data = json.load(f)
+            
+            room_data["leaderboard"].append({
+                "name": st.session_state.player_name,
+                "score": score,
+                "total": len(quiz)
+            })
+            
+            with open(room_file, "w") as f:
+                json.dump(room_data, f, indent=2)
+
+            st.success(f"Your Score: {score}/{len(quiz)}")
+
+            st.subheader("🏆 Leaderboard")
+            sorted_board = sorted(room_data["leaderboard"], key=lambda x: x["score"], reverse=True)
+            for rank, entry in enumerate(sorted_board, 1):
+                st.write(f"{rank}. **{entry['name']}** — {entry['score']}/{entry['total']}")
 
     st.stop()
 
